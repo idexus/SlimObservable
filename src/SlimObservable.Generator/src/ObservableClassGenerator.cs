@@ -114,7 +114,7 @@ namespace {namespaceName}
                 var value = attributeData.ConstructorArguments[0].Value.ToString();
                 if (typeName.Equals("string", StringComparison.Ordinal))
                     value = $"\"{value}\"";
-                if (typeName.Equals("double", StringComparison.Ordinal) || typeName.Equals("float", StringComparison.Ordinal))
+                if (typeName.Equals("double", StringComparison.Ordinal) || typeName.Equals("float", StringComparison.Ordinal) || typeName.Equals("decimal", StringComparison.Ordinal))
                     value = value.Replace(",", ".");
                 return value;
             }
