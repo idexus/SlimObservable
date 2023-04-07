@@ -92,6 +92,10 @@ public partial class TestObservable : System.ComponentModel.INotifyPropertyChang
 
 </details>
 
+# Nuget
+
+[https://www.nuget.org/packages/SlimObservable](https://www.nuget.org/packages/SlimObservable)
+
 # License
 
 The MIT License, Copyright (c) 2023 Pawel Krzywdzinski
