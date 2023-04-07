@@ -29,7 +29,7 @@ public partial class TestObservable : TestObservableProperties
 ```
 
 <details>
-<summary>Code Auto-Generated</summary>
+<summary>Auto-Generated Code</summary>
 
 ```cs
 public partial class TestObservable : System.ComponentModel.INotifyPropertyChanged
