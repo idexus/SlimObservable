@@ -28,7 +28,8 @@ public partial class TestObservable : TestObservableProperties
 }
 ```
 
-### Code Auto-Generated
+<details>
+<summary>Code Auto-Generated</summary>
 
 ```cs
 public partial class TestObservable : System.ComponentModel.INotifyPropertyChanged
@@ -88,6 +89,8 @@ public partial class TestObservable : System.ComponentModel.INotifyPropertyChang
     }
 }
 ```
+
+</details>
 
 # License
 
