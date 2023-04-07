@@ -2,7 +2,7 @@
 
 A C# library to automatically generate observable properties declared in an interface. 
 
-It uses INotifyPropertyChanged.
+It uses `INotifyPropertyChanged`.
 
 # Usage
 
