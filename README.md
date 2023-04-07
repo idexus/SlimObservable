@@ -32,6 +32,7 @@ public partial class TestObservable : TestObservableProperties
 <summary>Auto-Generated Code</summary>
 
 ```cs
+    
 public partial class TestObservable : System.ComponentModel.INotifyPropertyChanged
 {
     public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -61,6 +62,7 @@ public partial class TestObservable : System.ComponentModel.INotifyPropertyChang
             }
         }
     }
+    
     private string _name = default(string);
     public string Name
     {
@@ -74,6 +76,7 @@ public partial class TestObservable : System.ComponentModel.INotifyPropertyChang
             }
         }
     }
+    
     private string _description = default(string);
     public string Description
     {
@@ -88,6 +91,7 @@ public partial class TestObservable : System.ComponentModel.INotifyPropertyChang
         }
     }
 }
+    
 ```
 
 </details>
