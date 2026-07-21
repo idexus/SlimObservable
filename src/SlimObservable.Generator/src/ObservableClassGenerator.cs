@@ -78,8 +78,21 @@ namespace {namespaceName}
 
         void GeneratePropertyChanged() 
         {
+            var existInBases = false;
+            Helpers.LoopDownToObject(mainSymbol, type =>
+            {
+                existInBases = (type
+                    .GetMembers()
+                    .FirstOrDefault(e =>
+                        e.Kind == SymbolKind.Event &&
+                        e.DeclaredAccessibility == Accessibility.Public &&
+                        e.Name.Equals("PropertyChanged", StringComparison.Ordinal)) != null);
+
+                return existInBases;
+            });
+          
             builder.AppendLine($@"
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        public {(existInBases ? "new " : "")}event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
         private void InvokePropertyChanged(string propertyName)
         {{
