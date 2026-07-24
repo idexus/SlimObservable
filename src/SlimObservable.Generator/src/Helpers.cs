@@ -45,6 +45,17 @@ namespace SlimObservable.Generator
             var tail = type.IsGenericType ? $"Of{type.TypeArguments.FirstOrDefault().Name}" : "";
             return $"{type.Name}{tail}";
         }
+
+        public static void LoopDownToObject(INamedTypeSymbol symbol, Func<INamedTypeSymbol, bool> func)
+        {
+            var type = symbol;
+            var endLoop = false;
+            while (!endLoop && type != null && !type.Name.Equals("Object", StringComparison.Ordinal))
+            {
+                endLoop = func(type);
+                type = type.BaseType;
+            }
+        }
     }
 }
 
